@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Involve;
+  src: url('/fonts/Involve-Regular.woff2') format('woff2');
+  src:
+       url('/fonts/Involve-Regular.woff2') format('woff2'),
+       url('/fonts/Involve-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Involve;
+  src: url('/fonts/Involve-Medium.woff2') format('woff2');
+  src:
+       url('/fonts/Involve-Medium.woff2') format('woff2'),
+       url('/fonts/Involve-Medium.woff') format('woff');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Involve;
+  src: url('/fonts/Involve-Bold.woff2') format('woff2');
+  src:
+       url('/fonts/Involve-Bold.woff2') format('woff2'),
+       url('/fonts/Involve-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/Roboto-Medium.woff2') format('woff2');
+  src:
+       url('/fonts/Roboto-Medium.woff2') format('woff2'),
+       url('/fonts/Roboto-Medium.woff') format('woff');
+  font-weight: medium;
+  font-style: normal;
+}
+
