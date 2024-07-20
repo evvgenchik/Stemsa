@@ -1,22 +1,23 @@
 
 <script lang="ts">
-    import Button from './Button.svelte';
+    import Button from './UI/Button.svelte';
 </script>
 
-<div class="header">
-    <a href="/main" class="logo">Stemsa.</a>
-
-    <div class="menu">
-        <a href="/about">О нас</a>
-        <a href="/works">Наши работы</a>
-        <a href="/exclusive">Эксклюзивно</a>
-
-        <Button 
-            text="Контакты"
-            />
+<div class="container">
+    <div class="header">
+        <a href="/main" class="logo">Stemsa.</a>
+    
+        <div class="menu">
+            <a href="/about">О нас</a>
+            <a href="/works">Наши работы</a>
+            <a href="/exclusive">Услуги</a>
+    
+            <Button accentOnHover icon
+                text="Контакты"
+                />
+        </div>
     </div>
 </div>
-
 
 <style lang="postcss">
     .header {
@@ -39,8 +40,6 @@
 
             a {
                 font-size: 14rem;
-
-                transition: all 0.3s ease-out;
 
                 &:hover {
                     color: #1563FF;

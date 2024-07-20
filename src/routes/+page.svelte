@@ -3,19 +3,18 @@
     import "../css/fonts.css";
 
     import Header from '../components/Header.svelte';
+    import Main from './main/main.svelte';
+    import Footer from '../components/footer.svelte';
 
 </script>
 
 <div class="app">
-    <div class="container">
-        <Header/>
-    </div>
+    <Header />
+
+    <Main />
+
+    <Footer />
 </div>
 
 <style lang="postcss">
-    .container {
-        margin: 0 auto;
-        max-width: 1280rem;
-        width: 100%;
-    }
 </style>
