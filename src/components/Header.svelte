@@ -1,16 +1,17 @@
 
 <script lang="ts">
+    import { page } from '$app/stores';
     import Button from './UI/Button.svelte';
 </script>
 
 <div class="container">
     <div class="header">
-        <a href="/main" class="logo">Stemsa.</a>
+        <a href="/" class="logo">Stemsa.</a>
     
         <div class="menu">
-            <a href="/about">О нас</a>
-            <a href="/works">Наши работы</a>
-            <a href="/exclusive">Услуги</a>
+            <a href="/about" class:active={$page.url.pathname === "/about"}>О нас</a>
+            <a href="/works" class:active={$page.url.pathname === "/works"}>Наши работы</a>
+            <a href="/services" class:active={$page.url.pathname === "/services"}>Услуги</a>
     
             <Button accentOnHover icon
                 text="Контакты"
@@ -42,6 +43,10 @@
                 font-size: 14rem;
 
                 &:hover {
+                    color: #1563FF;
+                }
+
+                &.active {
                     color: #1563FF;
                 }
             }

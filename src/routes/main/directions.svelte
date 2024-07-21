@@ -11,7 +11,7 @@
     <div class="list">
         <div class="item">
             <div class="icon-container">
-                <img src="./images/main/directions/rhombus.png" alt="" class="icon">
+                <img src="./images/main/directions/rhombus.svg" alt="" class="icon">
             </div>
 
             <p class="item-title">ЗD Замеры</p>
@@ -24,7 +24,7 @@
 
         <div class="item">
             <div class="icon-container">
-                <img src="./images/main/directions/ruler.png" alt="" class="icon">
+                <img src="./images/main/directions/ruler.svg" alt="" class="icon">
             </div>
 
             <p class="item-title">Проектрирование</p>
@@ -36,7 +36,7 @@
 
         <div class="item">
             <div class="icon-container">
-                <img src="./images/main/directions/wrench.png" alt="" class="icon">
+                <img src="./images/main/directions/wrench.svg" alt="" class="icon">
             </div>
 
             <p class="item-title">Изготовление</p>
@@ -49,7 +49,7 @@
 
         <div class="item">
             <div class="icon-container">
-                <img src="./images/main/directions/hammer.png" alt="" class="icon">
+                <img src="./images/main/directions/hammer.svg" alt="" class="icon">
             </div>
 
             <p class="item-title">Монтаж изделий</p>
@@ -61,7 +61,7 @@
 
         <div class="item">
             <div class="icon-container">
-                <img src="./images/main/directions/star.png" alt="" class="icon">
+                <img src="./images/main/directions/star.svg" alt="" class="icon">
             </div>
 
             <p class="item-title">Эксклюзивные изделия</p>
@@ -74,7 +74,7 @@
 
         <div class="item">
             <div class="icon-container">
-                <img src="./images/main/directions/pen.png" alt="" class="icon">
+                <img src="./images/main/directions/pen.svg" alt="" class="icon">
             </div>
 
             <p class="item-title">Разработка Дизайна</p>
