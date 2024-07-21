@@ -215,7 +215,7 @@
 
             .links-list {
                 display: flex;
-                max-width: 255rem;
+                max-width: 237rem;
                 width: 100%;
                 justify-content: space-between;
 
