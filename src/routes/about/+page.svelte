@@ -94,7 +94,9 @@
                 justify-content: space-between;
 
                 .icon-container {
+                    height: 320rem;
                     position: relative;
+                    width: 485rem;
 
                     &::before {
                         content: "";
