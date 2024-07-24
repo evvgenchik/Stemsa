@@ -1,5 +1,5 @@
 <script>
-	import Services from './../main/services.svelte';
+	import WhatWeCan from '../main/whatWeCan.svelte';
     import Button from '../../components/UI/Button.svelte';
 
 </script>
@@ -30,6 +30,7 @@
                 <div class="button">
                     <Button accent icon
                         text="Контакты"
+                        url="/contacts"
                         />
                 </div>
             </div>
@@ -52,6 +53,7 @@
                 <div class="button">
                     <Button accent icon
                         text="Наши работы"
+                        url="/works"
                         />
                 </div>
             </div>
@@ -59,7 +61,7 @@
     </div>
 
     <div class="services">
-        <Services />
+        <WhatWeCan />
     </div>
 </div>
 
@@ -76,6 +78,7 @@
         .subtitle {
             color: #A4A4A4;
             letter-spacing: 0.32rem;
+            line-height: 25rem;
             margin: 34rem auto 0;
             max-width: 468rem;
             text-align: center;

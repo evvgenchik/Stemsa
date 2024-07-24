@@ -2,8 +2,7 @@
     import Button from '../../components/UI/Button.svelte';
     import Directions from './directions.svelte';
     import Qualities from './qualities.svelte';
-    import Services from './services.svelte';
-
+    import WhatWeCan from './whatWeCan.svelte';
 </script>
 
 <div class="container">
@@ -15,10 +14,12 @@
         <div class="buttons">
             <Button accent icon
                 text="Контакты"
+                url="/contacts"
                 />
     
             <Button
                 text="Услуги"
+                url="/services"
                 />
         </div>
     
@@ -38,7 +39,7 @@
     
         <Qualities />
     
-        <Services />
+        <WhatWeCan />
     </div>
 </div>
 

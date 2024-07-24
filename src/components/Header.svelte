@@ -15,6 +15,7 @@
     
             <Button accentOnHover icon
                 text="Контакты"
+                url="/contacts"
                 />
         </div>
     </div>

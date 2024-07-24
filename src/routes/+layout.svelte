@@ -7,9 +7,21 @@
 </script>
 
 <div class="app">
-    <Header />
+    <div class="wrapper">
+        <Header />
+    
+        <slot />
 
-    <slot />
-
-    <Footer />
+        <Footer />
+    </div>
 </div>
+
+
+<style lang="postcss">
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+    }
+</style>

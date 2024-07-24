@@ -51,6 +51,16 @@ a {
     color: #35353D;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 html {
     font-size: 1px;
 }

@@ -60,6 +60,7 @@
     <div class="button">
         <Button accent icon
             text="Подробнее"
+            url="/services"
             />
     </div>
 </div>

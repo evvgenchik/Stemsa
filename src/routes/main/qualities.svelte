@@ -22,6 +22,7 @@
             <div class="button">
                 <Button accent icon
                     text="Контакты"
+                    url="/contacts"
                     />
             </div>
         </div>

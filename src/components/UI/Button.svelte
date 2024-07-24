@@ -1,17 +1,32 @@
 <script lang="ts">
     export let text = "";
+    export let url = "";
+
     export let accent = false;
     export let accentOnHover = false;
     export let icon = false;
+    export let fullWidth = false;
+    export let blue = false;
+    export let disable = false;
+    export let submit = false;
 </script>
 
 
 <button class="button"
-    class:accent
-    class:accent-on-hover={accentOnHover}
-    >
+        class:accent
+        class:blue
+        class:disable
+        class:accent-on-hover={accentOnHover}
+        class:full-width={fullWidth}
+        type = {submit ? "submit" : "button"}
+        >
 
-    <span class="text">{text}</span> 
+    <span class="text">{text}</span>
+
+    {#if url}
+        <!-- svelte-ignore a11y-missing-content -->
+        <a href={url}></a>
+    {/if}
     
     {#if icon}
         <svg class="icon" width="8" height="9" viewBox="0 0 8 9" xmlns="http://www.w3.org/2000/svg">
@@ -32,6 +47,18 @@
         letter-spacing: 0.64rem;
         padding: 0 26rem;
         line-height: 46rem;
+        white-space: nowrap;
+        position: relative;
+
+        a {
+            border-radius: 27rem;
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
 
         .icon {
             fill: #35353D;
@@ -41,6 +68,31 @@
             border-color: #1563FF;
             color: #1563FF;
         }
+
+        &.full-width {
+            padding: 0;
+            width: 100%;
+        }
+
+        &.blue {
+            border-color: #1563FF;
+            color: #1563FF;
+
+            .icon {
+                fill: #1563FF;
+            }
+        }
+
+        &.disable {
+            border-color: #A6A6A6;
+            color: #A6A6A6;
+            cursor: default;
+
+            &:hover {
+                border-color: #A6A6A6;
+                color: #A6A6A6;
+            }
+        }   
 
         &.accent {
             background-color: #1563FF;
