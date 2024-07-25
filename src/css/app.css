@@ -61,6 +61,13 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 html {
     font-size: 1px;
 }
@@ -70,15 +77,25 @@ body {
     font-family: Involve;
     font-size: 16rem;
     font-weight: 500;
+    overflow-x: hidden;
+    height: 100%;
 }
 
 .container {
     margin: 0 auto;
-    max-width: 1012rem;
+    max-width: 1032rem;
+    padding: 0 10rem;
     width: 100%;
 }
 
 .highlight {
     color: #AEB2BB;
+}
+
+@media (max-width: 660px) {
+    .container {
+        max-width: 530rem;
+        padding: 0;
+    }
 }
 
