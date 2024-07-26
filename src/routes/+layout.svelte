@@ -2,7 +2,7 @@
     import "../css/app.css";
     import "../css/fonts.css";
 
-    import Header from '../components/Header.svelte';
+    import Header from '../components/header.svelte';
     import Footer from '../components/footer.svelte';
 </script>
 

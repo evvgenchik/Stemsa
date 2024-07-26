@@ -93,10 +93,16 @@ body {
     color: #AEB2BB;
 }
 
+@media (max-width: 768px) {
+    .container {
+        max-width: 658rem;
+        padding: 0 5rem;
+    }
+}
+
 @media (max-width: 660px) {
     .container {
         max-width: 530rem;
-        padding: 0;
     }
 }
 

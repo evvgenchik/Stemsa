@@ -1,7 +1,16 @@
 
 <script lang="ts">
     import { page } from '$app/stores';
+
     import Button from './UI/Button.svelte';
+    import Burger from './burger.svelte';
+    import BurgerMenu from './burgerMenu.svelte';
+
+    let isBurgerMenuOpen = false;
+
+    function toggleBurgerMenu() {
+        isBurgerMenuOpen = !isBurgerMenuOpen;
+    }
 </script>
 
 <div class="container">
@@ -18,6 +27,17 @@
                 url="/contacts"
                 />
         </div>
+
+        <div class="burger">
+            <Burger 
+                onClick={toggleBurgerMenu}
+                />
+        </div>
+
+        <BurgerMenu
+            isOpen={isBurgerMenuOpen}
+            onClose={toggleBurgerMenu} 
+            />
     </div>
 </div>
 
@@ -50,6 +70,22 @@
                 &.active {
                     color: #1563FF;
                 }
+            }
+        }
+
+        .burger {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .header {
+            .menu {
+                display: none;
+            }
+
+            .burger {
+                display: block;
             }
         }
     }
