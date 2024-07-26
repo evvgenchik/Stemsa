@@ -61,7 +61,6 @@
         поэтому мы с уверенностью можем гарантировать вам качество
     </p>
 
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div class="list"
          on:pointermove={onDrag}
          on:pointerdown={onPointerDown}
