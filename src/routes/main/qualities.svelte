@@ -23,12 +23,20 @@
         },
     ];
 
-    let mobileViewport = false;
+    let screenWidth = Viewports.Desktop;
 
     const visibilityDescriptions = new Array(items.length).fill(false);
     
     onMount(() => {
-        mobileViewport = window.innerWidth <= Viewports.Mobile;
+        screenWidth = window.innerWidth;
+
+        const handleResize = () => {
+            screenWidth = window.innerWidth;
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
     })
 
     function toggleDescriptionVisibility(index: number) {
@@ -43,15 +51,24 @@
         </h2>
     
         <div class="credo">
-            <p class="text">Сложные архитектурные конструкции? Помещениях 
-                с нестандартными стенами? Нет прямых углов? 
-                Множество мелких деталей интерьера? <br />
-                Нет причины беспокоиться, Stemsa справится с любыми
-                трудностями
+            <p class="text">
+                {#if screenWidth <= Viewports.Mobile}
+                    Сложные архитектурные конструкции? 
+                    Помещениях с нестандартными стенами?
+                    Нет прямых углов? 
+                    Множество мелких деталей интерьера? 
+                    Нет причины беспокоиться
+                    Stemsa справится с любыми трудностями
+                {:else}
+                    Сложные архитектурные конструкции? Помещениях 
+                    с нестандартными стенами? Нет прямых углов? 
+                    Множество мелких деталей интерьера? 
+                    Нет причины беспокоиться, Stemsa справится с любыми
+                    трудностями
+                {/if}
             </p>
     
-            <p class="author">Стебловский Александр</p>
-            <p class="author">Ген. Директор</p>
+            <p class="author">Стебловский Александр<br />Ген. Директор</p>
     
             <div class="button">
                 <Button accent icon
@@ -85,7 +102,7 @@
                     {item.description}
                 </p>
             
-                {#if mobileViewport}
+                {#if screenWidth <= Viewports.Mobile}
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
                     <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <div class="check" on:click={() => toggleDescriptionVisibility(index)}>
@@ -104,6 +121,7 @@
 
         .header {
             display: flex;
+            gap: 10rem;
             justify-content: space-between;
 
             .title {
@@ -117,18 +135,16 @@
                 .text {
                     font-weight: 400;
                     line-height: 24rem;
-                    max-width: 426rem;
+                    max-width: 456rem;
                     text-align: left;
+                    white-space: pre-line;
                 }
 
                 .author {
                     color: #919191;
                     font-size: 14rem;
+                    line-height: 20rem;
                     margin-top: 54rem;
-                }
-
-                .author + .author {
-                    margin-top: 7rem;
                 }
 
                 .button {
@@ -167,11 +183,11 @@
                         content: "";
                         background-color: #000;
                         border-radius: 50%;
-                        height: 6rem;
+                        height: 4rem;
                         left: 0;
                         position: absolute;
                         top: 50%;
-                        width: 6rem;
+                        width: 4rem;
 
                         transform: translate(0, -50%);
                     }
@@ -191,6 +207,13 @@
                         width: 100%;
                         z-index: 1;
                     }
+
+                    img {
+                        height: 100%;
+                        max-height: 431rem;
+                        max-width: 1012rem;
+                        width: 100%;
+                    }
                 }
 
                 .description {
@@ -202,8 +225,52 @@
                 }
             }
         }
+    }
 
-        @media (max-width: 768px) {
+    @media (max-width: 980px) {
+        .qualities {
+            .header {
+                display: block;
+                position: relative;
+
+                .title {
+                    font-size: 40rem;
+                    line-height: 55rem;
+                    max-width: 426rem;
+                }
+
+                .credo {
+                    font-size: 14rem;
+
+                    .text {
+                        margin-top: 56rem;
+                        max-width: 400rem;
+                    }
+
+                    .author {
+                        margin-top: 0;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                    }
+
+                    .button {
+                        margin-top: 0;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
+
+            .list {
+                margin-top: 83rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .qualities {
             .list {
                 .item {
                     position: relative;
@@ -239,10 +306,34 @@
                 }
             }
         }
+    }
 
-        @media (max-width: 660px) {
+    @media (max-width: 660px) {
+        .qualities {
+            .header {
+                .title {
+                    font-size: 32rem;
+                }
+
+                .credo {
+                    font-size: 12rem;
+
+                    .author {
+                        bottom: -83rem;
+                        font-size: 12rem;
+                    }
+
+                    .button {
+                        position: absolute;
+                        left: 0;
+                        top: 451rem;
+                    }
+                }
+            }
+
             .list {
                 gap: 19rem;
+                margin-top: 169rem;
 
                 .item {
                     display: block;

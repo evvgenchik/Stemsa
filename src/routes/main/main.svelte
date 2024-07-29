@@ -25,13 +25,13 @@
     
         <div class="icons">
             <div class="icon-container stair">
-                <img class="stair" src="./images/main/stair.png" alt="stair">
+                <img class="stair" src="./images/main/stair.jpg" alt="stair">
     
                 <div class="gradient"></div>
             </div>
     
             <div class="icon-container hall">
-                <img class="hall" src="./images/main/hall.png" alt="hall">
+                <img class="hall" src="./images/main/hall.jpg" alt="hall">
             </div>
         </div>
     
@@ -66,9 +66,11 @@
         }
 
         .icons {
-            margin-top: 51rem;
             display: flex;
-            gap: 32rem;
+            gap: 5rem;
+            justify-content: space-between;
+            margin-top: 51rem;
+            width: 100%;
 
             .icon-container {
                 position: relative;
@@ -85,8 +87,17 @@
                 }
 
                 .stair {
-                    width: 315rem;
-                    height: 456rem;
+                    height: 100%;
+                    max-height: 456rem;
+                    max-width: 315rem;
+                    width: 100%;
+                }
+
+                .hall {
+                    height: 100%;
+                    max-height: 456rem;
+                    max-width: 665rem;
+                    width: 100%;
                 }
 
                 &.stair::after {
@@ -102,6 +113,53 @@
 
                 img {
                     border-radius: 11rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .main {
+            .title {
+                font-size: 54rem;
+                max-width: 532rem;
+            }
+        }
+    }
+
+    @media (max-width: 660px) {
+        .main {
+            .title {
+                font-size: 36rem;
+                max-width: 382rem;
+            }
+        }
+    }
+
+    @media (max-width: 430px) {
+        .main {
+            .title {
+                font-size: 28rem;
+                max-width: 302rem;
+            }
+
+            .icons {
+                .icon-container {
+                    &::before {
+                        display: none;
+                    }
+
+                    &:first-child{
+                        display: none;
+                    }
+
+                    .hall {
+                        width: 100%;
+                    }
+
+                    img {
+                        border-radius: 0rem;
+                    }
                 }
             }
         }

@@ -102,7 +102,11 @@ body {
 
 @media (max-width: 660px) {
     .container {
-        max-width: 530rem;
+        max-width: 560rem;
+    }
+    
+    .mobile-hide {
+        display: none;
     }
 }
 

@@ -93,9 +93,10 @@
 
             .item {
                 align-items: center;
-                display: flex;
-                gap: 200rem;
                 border-bottom: 1rem solid #F4F4F4;
+                display: flex;
+                gap: 20rem;
+                justify-content: space-between;
                 padding-bottom: 25rem;
 
                 .number {
@@ -105,29 +106,17 @@
                 }
 
                 .point {
+                    max-width: 440rem;
+                    width: 100%;
+                    
                     .name {
                         font-size: 20rem;
                         font-weight: bold;
                     }
 
                     .description {
-                        color: #535353;
+                        color: #A6A6A6;
                         margin-top: 24rem;
-                        position: relative;
-                        padding-left: 12rem;
-
-                        &::before {
-                            content: "";
-                            background-color: #535353;
-                            border-radius: 50%;
-                            height: 6rem;
-                            left: 0;
-                            position: absolute;
-                            top: 50%;
-                            width: 6rem;
-
-                            transform: translate(0, -50%);
-                        }
                     }
                 }
             }
@@ -140,6 +129,69 @@
         .button {
             margin-top: 94rem;
             align-self: self-end;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .services {
+            .title {
+                font-size: 40rem;
+            }
+
+            .subtitle {
+                font-size: 12rem;
+                max-width: 521rem;
+            }
+
+            .list {
+                .item {
+                    .number {
+                        font-size: 24rem;
+                    }
+
+                    .point {
+                        .name {
+                            font-size: 14rem;
+                        }
+
+                        .description {
+                            margin-top: 12rem;
+                            font-size: 12rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 680px) {
+        .services {
+            .title {
+                font-size: 30rem;
+            }
+
+            .subtitle {
+                font-size: 12rem;
+                max-width: 288rem;
+            }
+
+            .list {
+                .item {
+                    .number {
+                        font-size: 20rem;
+                    }
+
+                    .point {
+                        .name {
+                            font-size: 14rem;
+                        }
+
+                        .description {
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
     }
 </style>

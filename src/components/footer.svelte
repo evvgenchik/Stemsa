@@ -153,6 +153,7 @@
 
                 .contacts {
                     display: flex;
+                    gap: 10rem;
                     justify-content: space-between;
                     max-width: 156rem;
                     width: 100%;
@@ -215,9 +216,9 @@
 
             .links-list {
                 display: flex;
+                justify-content: space-between;
                 max-width: 237rem;
                 width: 100%;
-                justify-content: space-between;
 
                 .link {
                     color: #A6A6A6;
@@ -226,6 +227,92 @@
                     &:hover {
                         color: #1563FF;
                     }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer {
+            .header {
+                .text {
+                    font-size: 16rem;
+                }
+
+                .email {
+                    font-size: 12rem;
+                    max-width: 207rem;
+
+                    label {
+                        top: -7rem;
+                    }
+                }
+            }
+
+            .main {
+                .logo {
+                    font-size: 20rem;
+                    line-height: 20rem;
+                }
+
+                .info {
+                    .description {
+                        font-size: 11rem;
+                    }
+
+                    .contacts {
+                        .icon-container {
+                            height: 32rem;
+                            width: 32rem;
+                            .icon {
+                                height: 17rem;
+                                width: 17rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                .links-list {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 680px) {
+        .footer {
+            padding: 56rem 20rem 23rem;
+
+            .header {
+                display: block;
+                border-bottom: none;
+
+                .email {
+                    margin-top: 56rem;
+                }
+            }
+
+            .main {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 16rem;
+
+                .info {
+                    margin-top: 0;
+
+                    .description {
+                        display: none;
+                    }
+                }
+            }
+
+            .bottom {
+                margin-top: 11rem;
+
+                .links-list {
+                    display: none;
                 }
             }
         }

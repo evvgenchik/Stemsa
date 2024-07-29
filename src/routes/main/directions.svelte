@@ -53,7 +53,7 @@
 
 <div class="directions">
     <h2 class="title">
-        Изучите <span class="highlight">Наши</span> Направления
+        <span class="mobile-hide">Изучите</span> <span class="highlight">Наши</span> Направления
     </h2>
     
     <p class="subtitle">
@@ -174,6 +174,7 @@
 
         .list {
             margin-top: 48rem;
+            overflow: hidden;
 
             .pane {
                 display: grid;
@@ -228,7 +229,28 @@
         }
     }
 
-    @media (max-width: 660px) {
+    @media (max-width: 768px) {
+        .directions {
+            .title {
+                font-size: 40rem;
+            }
+
+            .subtitle {
+                font-size: 12rem;
+                line-height: 20rem;
+                max-width: 580rem;
+            }
+
+            .list {
+                .pane {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
+    
+
+    @media (max-width: 680px) {
         .directions {
             .list {
                 height: 446rem;
@@ -238,6 +260,22 @@
                     grid-template-columns: repeat(3, 1fr);
                     position: absolute;
                 }
+            }
+        }
+    }
+
+    @media (max-width: 580px) {
+        .directions {
+
+            .title {
+                font-size: 36rem;
+            }
+
+            .subtitle {
+                font-size: 12rem;
+                line-height: 16rem;
+                margin-top: 22rem;
+                max-width: 383rem;
             }
         }
     }
