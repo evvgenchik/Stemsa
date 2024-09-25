@@ -14,7 +14,7 @@
 </script>
 
 <div class="container">
-    <div class="header">
+    <header class="header">
         <a href="/" class="logo">Stemsa.</a>
     
         <div class="menu">
@@ -38,7 +38,7 @@
             isOpen={isBurgerMenuOpen}
             onClose={toggleBurgerMenu} 
             />
-    </div>
+    </header>
 </div>
 
 <style lang="postcss">

@@ -5,7 +5,7 @@
 <div class="temp">
 <div class="footer">
     <div class="container">
-        <div class="header">
+        <header class="header">
             <p class="text">
                 Будьте на связи с нами.
             </p>
@@ -14,7 +14,7 @@
                 <input type="text" id="email">
                 <label for="email">Ваш email</label>
             </div>
-        </div>
+        </header>
     
         <div class="main">
             <h2 class="logo">Stemsa.</h2>

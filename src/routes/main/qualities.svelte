@@ -45,7 +45,7 @@
 </script>
 
 <div class="qualities">
-    <div class="header">
+    <header class="header">
         <h2 class="title">
             <span class="highlight">Выберите</span> контроль, профессионализм и качество
         </h2>
@@ -77,7 +77,7 @@
                     />
             </div>
         </div>
-    </div>
+    </header>
 
     <div class="list">
         <div class="item">

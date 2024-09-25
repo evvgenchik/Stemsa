@@ -78,7 +78,8 @@ body {
     font-family: Involve;
     font-size: 16rem;
     font-weight: 500;
-    overflow-x: hidden;
+	overflow-x: hidden;
+
     height: 100%;
 }
 

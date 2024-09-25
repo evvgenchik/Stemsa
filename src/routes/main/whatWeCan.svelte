@@ -10,52 +10,52 @@
         стекла, мрамора, дерева.
     </p>
 
-    <div class="list">
-        <div class="item">
+    <ul class="list">
+        <li class="item">
             <div class="number">01</div>
 
             <div class="point">
                 <p class="name">Двери</p>
                 <p class="description">Из натурального камня и нержавеющей стали</p>
             </div>
-        </div>
+        </li>
         
-        <div class="item">
+        <li class="item">
             <div class="number">02</div>
 
             <div class="point">
                 <p class="name">Душевые стеклянные перегородки </p>
                 <p class="description">Из закаленного стекла ис фурнитурой MWE Германия</p>
             </div>
-        </div>
+        </li>
         
-        <div class="item">
+        <li class="item">
             <div class="number">03</div>
 
             <div class="point">
                 <p class="name">Лестницы</p>
                 <p class="description">Из натурального камня и нержавеющей стали</p>
             </div>
-        </div>
+        </li>
         
-        <div class="item">
+        <li class="item">
             <div class="number">04</div>
 
             <div class="point">
                 <p class="name">Перегородки раздвижные межкомнатные</p>
                 <p class="description">Из алюминия и закаленного стекла </p>
             </div>
-        </div>
+        </li>
         
-        <div class="item">
+        <li class="item">
             <div class="number">05</div>
 
             <div class="point">
                 <p class="name">Эксклюзивные иделия под заказ</p>
                 <p class="description">Скрытые сейфы, столы, предметы интерьера  </p>
             </div>
-        </div>
-    </div>
+        </li>
+    </ul>
 
     <div class="button">
         <Button accent icon
