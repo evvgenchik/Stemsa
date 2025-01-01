@@ -1,5 +1,5 @@
 <script lang="ts">
-    const SCROLL_SPEED_MULTIPLIER = 2;
+    const SCROLL_SPEED_MULTIPLIER = 1.5;
     const VERTICAL_SCROLLING_RANGE = 25;
 
     let listRef: HTMLElement;
@@ -7,17 +7,18 @@
 
     let panePosX = 0;
     let isDragging = false;
-    let startY = 0;
+    let initialY = 0;
     let cursorX = 0;
 
     function onDrag(event) {
         if (!isDragging) {
             return;
         }
+
         const currentY = event.offsetY || (event.touches && event.touches[0].clientY);
 
         // Ignore vertical movement if it exceeds a small threshold (e.g., 5px)
-        if (Math.abs(currentY - startY) > VERTICAL_SCROLLING_RANGE) {
+        if (Math.abs(currentY - initialY) > VERTICAL_SCROLLING_RANGE) {
             return;
         }
 
@@ -26,9 +27,7 @@
         const listRect = listRef.getBoundingClientRect();
         const paneRect = paneRef.getBoundingClientRect();
         const maxRightPosition = -(paneRect.width - listRect.width - listRef.offsetLeft * 2);
-
         const offsetX = event.offsetX || (event.touches && event.touches[0].clientX);
-        
         let leftPosX = (offsetX - cursorX) * SCROLL_SPEED_MULTIPLIER;
 
         leftPosX = Math.min(leftPosX, 0);
@@ -38,12 +37,11 @@
     } 
 
     function onPointerDown(event) {
-        const offsetX = event.offsetX || (event.touches && event.touches[0].clientX);
-        const offsetY = event.offsetY || (event.touches && event.touches[0].clientY);
+        const initialX = event.offsetX || (event.touches && event.touches[0].clientX);
+        initialY = event.offsetY || (event.touches && event.touches[0].clientY);
 
         isDragging = true;
-        cursorX = (offsetX - paneRef.offsetLeft);
-        startY = offsetY;
+        cursorX = (initialX - paneRef.offsetLeft);
     }
 
     function stopDragging() {
